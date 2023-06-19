@@ -1,4 +1,5 @@
 import { useState, useEffect, ChangeEvent } from "react";
+import "./index.css";
 
 type Task = {
   id: string;
@@ -47,25 +48,31 @@ export default function App() {
 
   return (
     <>
-      <h1>Todo</h1>
+      <h1>Todo List </h1>
       <input
         type="text"
-        placeholder="type a task..."
+        placeholder="Type a task..."
         value={name}
         onChange={handleChange}
+        className="task"
       />
-      <button onClick={handleClick}>add</button>
+      <button onClick={handleClick} className="add">
+        Add
+      </button>
       <ul>
         <div>
           {tasks.map((task) => (
-            <li key={task.id}>
+            <li key={task.id} className="task-item">
               <input
                 type="checkbox"
                 checked={task.status}
                 onChange={() => toggleTodo(task.id)}
+                className="checkbox"
               />
-              {task.title}
-              <button onClick={() => deleteTodo(task.id)}>-</button>
+              <span>{task.title}</span>
+              <button onClick={() => deleteTodo(task.id)} className="delete">
+                &#x1F5D1;&#xFE0F;
+              </button>
             </li>
           ))}
         </div>

@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(90deg, rgb(127, 182, 209), rgb(148, 107, 232));
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task {
+  background: rgb(235, 235, 235);
+  padding: 5px;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  border: none;
+}
+
+.add {
+  background: blue;
+  background: linear-gradient(90deg, rgb(96, 120, 218), rgb(70, 80, 221));
+  padding: 5px;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+li {
+  background: rgb(235, 235, 235);
+  margin-top: 1rem;
+  list-style-type: none;
+  border-radius: 0.3rem;
+}
+
+.checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.checkbox:checked + span {
+  text-decoration: line-through;
+}
+
+span {
+  padding: 5px;
+}
+
+.task-item {
+  position: relative;
+  opacity: 0.7;
+}
+
+.task-item:hover {
+  opacity: 1;
+}
+
+.delete {
+  padding: 5px;
+  border: 0;
+  background: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
